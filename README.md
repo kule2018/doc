@@ -5,8 +5,10 @@
 
 读取：
 ```javascript
+// IE >8以及其他现代浏览器
 console.log(window.pageXOffset); 
 console.log(window.pageYOffset);
+
 // IE <= 8
 console.log(document.body.scrollLeft); 
 console.log(document.body.scrollTop);
