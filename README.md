@@ -5,7 +5,7 @@
 
 读取：
 ```javascript
-// IE >8以及其他现代浏览器
+// IE > 8，以及其他现代浏览器
 console.log(window.pageXOffset); 
 console.log(window.pageYOffset);
 
@@ -16,4 +16,20 @@ console.log(document.body.scrollTop);
 设置:
 ```javascript
 window.scroll(x, y);
+```
+
+
+## dom元素的滚动条
+
+读取：
+```javascript
+
+console.log(window.scrollTop); 
+console.log(window.scrollLeft);
+
+```
+设置:
+```javascript
+window.scrollTop = 100; 
+window.scrollLeft = 100;
 ```
