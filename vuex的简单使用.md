@@ -76,9 +76,11 @@ this.$store.state.count;
 `不可以直接操作state, 同步操作用mutation, 异步用action`
 
 
-## mutation
+## Mutation
+对state的数据的变更操作都需要通过mutation来操作
 
-
+## Action
+对于异步获取的数据用action来包装, 然后通过调用mutation来修改state
 
 
 
