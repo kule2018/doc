@@ -66,22 +66,28 @@ const store = new Vuex.Store({
 
 ## State
 可以类比原来vue中的data参数; 这些数据放在这主要是为了多组件共享.
-.声明state.
+声明state.
 
-.组件内读取: 
+组件内读取: 
 ```javascript
 this.$store.state.count;
 ```
-.组件内设置
+组件内设置
 `不可以直接操作state, 同步操作用mutation, 异步用action`
 
 
 ## Mutation
 对state的数据的变更操作都需要通过mutation来操作
+组件内调用
+this.$store.commit('incrementSync');
 
 ## Action
 对于异步获取的数据用action来包装, 然后通过调用mutation来修改state
+组件内调用
+this.$store.dispatch('resetAsyn');
 
+## 总之
+总之vuex的出现是为了在组件数量很多,数据共享复杂的情况下的一种组件间数据共享的解决方案, 或者叫逻辑规范.
 
 
 
