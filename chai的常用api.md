@@ -1,30 +1,48 @@
-# webpack入门 2016-12-21
+# chai 2016-12-24
 
-## webpack适合什么项目   
+###chai有3种断言风格
 
-1. 无论是多页面开发还是单页开发;   
-2. 也不管是基于jq还是基于vue/react等开发;   
-3. 所有的前端页面都可以使用webpack开发;
+>should
+```javascript
+chai.should();
+foo.should.be.a('string');
+foo.should.equal('bar');
+foo.should.have.length(3);
+tea.should.have.property('flavors')
+  .with.length(3);
+```
 
-## 不用webpack开发行吗?
 
-*行*如果...   
 
-1. 页面很简单, 就是一个活动页面;
-2. 页面是活动性质的, 不需要后期继续维护;
-3. 页面是在改别人代码的基础上制作;
 
-那么可以不用webpack开发(个人开发体验, 发生疑惑请自行辨别)
+```javascript
+var expect = require('chai').expect;
+// 相等或不相等
+expect(4 + 5).to.be.equal(9);
+expect(4 + 5).to.be.not.equal(10);
+expect(foo).to.be.deep.equal({ bar: 'baz' });
 
-## 如果决定用, 那么开始咯~
+// 布尔值为true
+expect('everthing').to.be.ok;
+expect(false).to.not.be.ok;
 
-### 安装
-1. 首先安装node最新版;
-2. 安装完毕后,在cmd中输入*cd*进入项目文件夹;
-3. 运行 `npm i webpack` 进行安装;
+// typeof
+expect('test').to.be.a('string');
+expect({ foo: 'bar' }).to.be.an('object');
+expect(foo).to.be.an.instanceof(Foo);
 
-### 使用
-1. 首先, 需要建立一个main.js, 这里面会写我们都要引入那些模块()
+// include
+expect([1,2,3]).to.include(2);
+expect('foobar').to.contain('foo');
+expect({ foo: 'bar', hello: 'universe' }).to.include.keys('foo');
 
+// empty
+expect([]).to.be.empty;
+expect('').to.be.empty;
+expect({}).to.be.empty;
+
+// match
+expect('foobar').to.match(/^foo/);
+```
 
 
