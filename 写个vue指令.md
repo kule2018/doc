@@ -1,7 +1,7 @@
 ---
-title: My New Post
-date: 2015-02-12 09:55:41
-tags:
+title: 写个vue的指令
+date: 2016-12-24 09:55:41
+tags: ['javascript', 'css']
 ---
 
 # 写个vue的指令 2016-12-24
