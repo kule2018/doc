@@ -4,8 +4,6 @@ date: 2016-12-24 09:55:41
 tags: ['javascript', 'css']
 ---
 
-# 写个vue的指令 2016-12-24
-
 ## 定义指令
 ```javascript
 Vue.directive('demo', {
