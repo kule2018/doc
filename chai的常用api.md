@@ -1,6 +1,6 @@
 # chai 2016-12-24
 
-###chai有3种断言风格
+###3种断言风格
 
 >should
 ```javascript
